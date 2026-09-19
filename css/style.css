@@ -382,7 +382,7 @@
   /* ---------- About ---------- */
   .about-grid{ 
     display:grid; 
-    grid-template-columns:1fr 1fr; 
+    grid-template-columns:1fr;
     gap:56px; 
     align-items:center; 
   }
@@ -417,8 +417,6 @@
 
 
    /* ---------- Education & Certifications ---------- */
-
-
   .edu-cert-grid{ 
     display:grid; 
     grid-template-columns:1fr 1fr; 
@@ -556,8 +554,8 @@
 
 
 
-
   /* ---------- Skills ---------- */
+<<<<<<< HEAD
   .skills-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 
   .skill-card{
@@ -584,12 +582,43 @@
     margin-bottom:4px; 
   }
 
-
+=======
   .skills-grid{ 
     display:grid; 
     grid-template-columns:repeat(4,1fr); 
     gap:18px; 
   }
+
+  .skill-card{
+    background:var(--card); 
+    border:1px solid var(--line); 
+    border-radius:var(--radius);
+    padding:26px 18px; 
+    text-align:center; 
+    transition:all .18s ease;
+  }
+
+  .skill-card:hover{ 
+    border-color:var(--v1); 
+    transform:translateY(-4px);
+   }
+
+  .skill-card .icon{ 
+    font-size:28px; 
+    margin-bottom:12px; }
+
+  .skill-card .name{ 
+    font-size:14px; 
+    font-weight:600; 
+    margin-bottom:4px; 
+  }
+
+>>>>>>> 06679e1ca8ce2f83c05f40185afd7ebc93693dc3
+  .skill-card .level{ 
+    font-size:12px; 
+    color:var(--muted); 
+  }
+
 
 
 
@@ -791,3 +820,29 @@
     object-fit:cover;
     display:block;
 }
+<<<<<<< HEAD
+
+/* .about-image{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} */
+
+/* .about-image img{
+    width:100%;
+    max-width:600px;
+    height:520px;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid var(--line);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    transition:.4s;
+} */
+
+/* .about-image img:hover{
+    transform:translateY(-8px) scale(1.02);
+    border-color:var(--v2);
+} */
+=======
+>>>>>>> 06679e1ca8ce2f83c05f40185afd7ebc93693dc3
