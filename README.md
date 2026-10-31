@@ -164,7 +164,7 @@ Dr. A.P.J. Abdul Kalam Technical University, Lucknow (AKTU)
 
 **2024 – 2028**
 
-CGPA: **7.75 / 10**
+CGPA: **7.78 / 10**
 
 Relevant Coursework:
 
