@@ -170,10 +170,10 @@
 
   /* ---------- Hero ---------- */
   .hero{ 
-    min-height:85vh; 
+    min-height:92vh; 
     display:flex; 
     align-items:center; 
-    padding:50px 0; 
+    padding:64px 0; 
   }
 
   .hero-grid{ 
@@ -723,7 +723,8 @@
 
   @media (max-width:900px){
     .hero-grid{ 
-      grid-template-columns:1fr; 
+      grid-template-columns:1fr;
+      gap: 35px; 
       text-align:center; 
     }
 
