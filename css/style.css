@@ -797,3 +797,20 @@
     object-fit:cover;
     display:block;
 }
+
+
+@media screen and (max-width: 900px) {
+
+    body::before {
+        content: "MOBILE CSS ACTIVE";
+        position: fixed;
+        top: 80px;
+        left: 10px;
+        z-index: 99999;
+        background: red;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+}
