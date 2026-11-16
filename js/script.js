@@ -1,16 +1,31 @@
-const menuBtn = document.getElementById('menuBtn');
+document.addEventListener('DOMContentLoaded', () => {
 
-  const navlinks = document.getElementById('navlinks');
+    const menuBtn = document.getElementById('menuBtn');
+    const navlinks = document.getElementById('navlinks');
 
-  menuBtn.addEventListener('click', () => navlinks.classList.toggle('open'));
+    if (menuBtn && navlinks) {
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('open');
+        });
 
-  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+        navlinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navlinks.classList.remove('open');
+            });
+        });
+    }
 
-  const io = new IntersectionObserver((entries) => {
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
 
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    document.querySelectorAll('.reveal').forEach(el => {
+        io.observe(el);
+    });
 
-  }, { threshold: 0.12 });
-
-  
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+});
