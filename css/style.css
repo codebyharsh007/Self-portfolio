@@ -170,10 +170,10 @@
 
   /* ---------- Hero ---------- */
   .hero{ 
-    min-height:92vh; 
+    min-height:85vh; 
     display:flex; 
     align-items:center; 
-    padding:64px 0; 
+    padding:50px 0; 
   }
 
   .hero-grid{ 
