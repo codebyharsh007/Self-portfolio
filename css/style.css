@@ -169,12 +169,12 @@
 
 
   /* ---------- Hero ---------- */
-  .hero{ 
-    min-height:92vh; 
-    display:flex; 
-    align-items:center; 
-    padding:64px 0; 
-  }
+  .hero {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    padding: 65px 0;
+}
 
   .hero-grid{ 
     display:grid; 
@@ -721,70 +721,137 @@
 
   
 
-  @media (max-width:900px){
+/* ---------- RESPONSIVE DESIGN ---------- */
 
+@media (max-width: 900px) {
+
+    /* Hero Section */
     .hero {
         min-height: auto;
-        padding: 60px 0;
-    }
-    .hero-grid{ 
-      grid-template-columns:1fr;
-      gap: 35px; 
-      text-align:center; 
+        height: auto;
+        padding: 45px 0 55px;
+        display: flex;
+        align-items: center;
     }
 
-    .hero-actions, .socials{ 
-      justify-content:center; 
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+        align-items: center;
     }
 
-    .avatar-wrap{ 
-      order:-1; 
-    }
-    .avatar-ring{ 
-      width:220px; 
-      height:220px; 
+    .avatar-wrap {
+        order: -1;
+        justify-content: center;
     }
 
-    .about-grid{ 
-      grid-template-columns:1fr; 
-      gap:32px; 
+    .avatar-ring {
+        width: 200px;
+        height: 200px;
     }
 
-    .edu-cert-grid{ 
-      grid-template-columns:1fr; 
+    .hero h1 {
+        font-size: clamp(32px, 8vw, 42px);
     }
 
-    .skills-grid{ 
-      grid-template-columns:repeat(2,1fr); 
+    .hero .role {
+        font-size: 16px;
     }
 
-    .projects{ 
-      grid-template-columns:1fr; 
+    .hero p.lead {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .navlinks{
-      position:fixed; 
-      top:72px; 
-      left:0; 
-      right:0; 
-      background:var(--bg-soft);
-      flex-direction:column; 
-      padding:22px 28px; 
-      border-bottom:1px solid var(--line);
-      gap:18px; 
-      display:none;
+    .hero-actions,
+    .socials {
+        justify-content: center;
     }
 
-    .navlinks.open{ 
-      display:flex; 
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
-    .menu-btn{ 
-      display:block; 
+
+    /* Education */
+    .edu-cert-grid {
+        grid-template-columns: 1fr;
     }
-    .contact-box{ 
-      padding:36px 22px; 
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
+
+    /* Projects */
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile Navbar */
+    .navlinks {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-soft);
+        flex-direction: column;
+        padding: 22px 28px;
+        border-bottom: 1px solid var(--line);
+        gap: 18px;
+        display: none;
+    }
+
+    .navlinks.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* Contact */
+    .contact-box {
+        padding: 36px 22px;
+    }
+
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+
+    .wrap {
+        padding: 0 18px;
+    }
+
+    .hero {
+        padding: 35px 0 45px;
+    }
+
+    .avatar-ring {
+        width: 175px;
+        height: 175px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-actions {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 11px 17px;
+        font-size: 13px;
+    }
+
+}
+
 
 
 
@@ -801,58 +868,4 @@
 
 
 
-
-/* ---------- MOBILE HERO FIX ---------- */
-
-@media only screen and (max-width: 900px) {
-
-    .hero {
-        min-height: auto !important;
-        height: auto !important;
-        padding: 45px 0 60px !important;
-        display: block !important;
-    }
-
-    .hero-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 35px !important;
-        text-align: center !important;
-        align-items: center !important;
-    }
-
-    .hero-grid > div:first-child {
-        order: 2 !important;
-    }
-
-    .avatar-wrap {
-        order: 1 !important;
-        justify-content: center !important;
-    }
-
-    .avatar-ring {
-        width: 200px !important;
-        height: 200px !important;
-    }
-
-    .hero h1 {
-        font-size: clamp(32px, 8vw, 42px) !important;
-    }
-
-    .hero .role {
-        font-size: 16px !important;
-    }
-
-    .hero p.lead {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        font-size: 14px !important;
-    }
-
-    .hero-actions,
-    .socials {
-        justify-content: center !important;
-    }
-
-}
 
